@@ -11,7 +11,7 @@
 #' @export
 theme_pub <- function(base_size=14, base_family="helvetica") {
   # helvetica is Helvetica on Mac OS X :)
-  if (!loyalr::is_mac() && base_family == 'helvetica') {
+  if (loyalr::is_mac() && base_family == 'helvetica') {
     base_family = 'Helvetica'
   }
 
