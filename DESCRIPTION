@@ -1,0 +1,21 @@
+Package: loyalr
+Title: Personal R package of Joshua Loyal
+Version: 0.1.0
+Date: 2017-11-06
+Authors@R: person("Joshua", "Loyal", email = "jloyal25@gmail.com",
+                  role = c("aut", "cre"))
+Description: Personal R functions used by Joshua Loyal.
+Depends: R (>= 3.4.2)
+License: MIT + file LICENSE
+Encoding: UTF-8
+URL: http://github.com/joshloyal/loyalr
+BugReports: http://github.com/joshloyal/loyalr/issues
+LazyData: true
+Imports:
+    grid,
+    ggthemes,
+    scales,
+    ggplot2
+Suggests:
+    testthat
+RoxygenNote: 6.0.1
