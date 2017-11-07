@@ -2,16 +2,54 @@
 % Please edit documentation in R/themes.R
 \name{theme_pub}
 \alias{theme_pub}
+\alias{scale_fill_pub}
+\alias{scale_color_pub}
 \title{Publication Theme}
 \usage{
-theme_pub(base_size = 14, base_family = "helvetica")
+theme_pub(base_size = 14, base_family = "helvetica",
+  legend.position = "bottom")
+
+scale_fill_pub(...)
+
+scale_color_pub(...)
 }
 \arguments{
 \item{base_size}{The size of the fonts used throughout the theme.}
 
 \item{base_family}{The font family used throughout the theme.}
+
+\item{legend.position}{The position of the legends ("none", "left", "right",
+"bottom", "top").}
+
+\item{...}{Arguments passed to ggplot2::discrete_scale}
+
+\item{...}{Arguments passed to ggplot2::discrete_scale}
 }
 \description{
 This is a publication ready theme created by Koundinya Desiraju in the
-following blog post: https://rpubs.com/Koundy/71792.
+following blog post: \url{https://rpubs.com/Koundy/71792}.
+
+Defines the color palette for the 'fill' aesthetic used by the publication
+theme.
+
+Defines the color palette for the 'color' aesthetic used by the publication
+theme.
+}
+\examples{
+
+library(ggplot2)
+
+ggplot(mtcars, aes(x = factor(carb), fill = factor(carb))) +
+  geom_bar() +
+  scale_fill_pub() +
+  theme_pub()
+
+
+library(ggplot2)
+
+ggplot(mtcars, aes(x = mpg, y = disp, color = factor(carb))) +
+  geom_point() +
+  scale_color_pub() +
+  theme_pub()
+
 }

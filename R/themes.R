@@ -3,10 +3,12 @@
 #' Publication Theme
 #'
 #' This is a publication ready theme created by Koundinya Desiraju in the
-#' following blog post: https://rpubs.com/Koundy/71792.
+#' following blog post: \url{https://rpubs.com/Koundy/71792}.
 #'
 #' @param base_size The size of the fonts used throughout the theme.
 #' @param base_family The font family used throughout the theme.
+#' @param legend.position The position of the legends ("none", "left", "right",
+#'   "bottom", "top").
 #'
 #' @export
 theme_pub <- function(base_size=14, base_family="helvetica",
@@ -16,7 +18,7 @@ theme_pub <- function(base_size=14, base_family="helvetica",
     base_family = 'Helvetica'
   }
 
-  if (!legend.position == 'bottom') {
+  if (legend.position != 'bottom' && legend.position != 'top') {
     legend.direction = 'vertical'
   } else {
     legend.direction = 'horizontal'
@@ -65,7 +67,7 @@ theme_pub <- function(base_size=14, base_family="helvetica",
 #'   scale_fill_pub() +
 #'   theme_pub()
 #'
-#' @export
+#' @rdname theme_pub
 scale_fill_pub <- function(...){
   ggplot2::discrete_scale("fill", "Publication",
     scales::manual_pal(values = c("#386cb0", "#fdb462", "#7fc97f", "#ef3b2c",
@@ -89,7 +91,7 @@ scale_fill_pub <- function(...){
 #'   scale_color_pub() +
 #'   theme_pub()
 #'
-#' @export
+#' @rdname theme_pub
 scale_color_pub <- function(...){
   ggplot2::discrete_scale("color", "Publication",
     scales::manual_pal(values = c("#386cb0", "#fdb462", "#7fc97f", "#ef3b2c",
