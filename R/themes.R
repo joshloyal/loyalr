@@ -68,6 +68,8 @@ theme_pub <- function(base_size=14, base_family="helvetica",
 #'   theme_pub()
 #'
 #' @rdname theme_pub
+#'
+#' @export
 scale_fill_pub <- function(...){
   ggplot2::discrete_scale("fill", "Publication",
     scales::manual_pal(values = c("#386cb0", "#fdb462", "#7fc97f", "#ef3b2c",
@@ -92,6 +94,8 @@ scale_fill_pub <- function(...){
 #'   theme_pub()
 #'
 #' @rdname theme_pub
+#'
+#' @export
 scale_color_pub <- function(...){
   ggplot2::discrete_scale("color", "Publication",
     scales::manual_pal(values = c("#386cb0", "#fdb462", "#7fc97f", "#ef3b2c",

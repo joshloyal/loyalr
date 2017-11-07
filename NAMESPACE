@@ -3,6 +3,8 @@
 export(boxcox_interval)
 export(is_mac)
 export(reorder_within)
+export(scale_color_pub)
+export(scale_fill_pub)
 export(scale_x_reordered)
 export(scale_y_reordered)
 export(theme_pub)
