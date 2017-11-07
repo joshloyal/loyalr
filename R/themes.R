@@ -9,10 +9,17 @@
 #' @param base_family The font family used throughout the theme.
 #'
 #' @export
-theme_pub <- function(base_size=14, base_family="helvetica") {
+theme_pub <- function(base_size=14, base_family="helvetica",
+                      legend.position = 'bottom') {
   # helvetica is Helvetica on Mac OS X :)
   if (loyalr::is_mac() && base_family == 'helvetica') {
     base_family = 'Helvetica'
+  }
+
+  if (!legend.position == 'bottom') {
+    legend.direction = 'vertical'
+  } else {
+    legend.direction = 'horizontal'
   }
 
   (ggthemes::theme_foundation(base_size=base_size, base_family=base_family)
@@ -31,10 +38,10 @@ theme_pub <- function(base_size=14, base_family="helvetica") {
       panel.grid.major = ggplot2::element_line(colour = "#f0f0f0"),
       panel.grid.minor = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(colour = NA),
-      legend.position = "bottom",
-      legend.direction = "horizontal",
+      legend.position = legend.position,
+      legend.direction = legend.direction,
       legend.key.size= ggplot2::unit(0.2, "cm"),
-      legend.margin = ggplot2::unit(0, "cm"),
+      legend.margin = ggplot2::unit(0.2, "cm"),
       legend.title = ggplot2::element_text(face = "italic"),
       plot.margin = ggplot2::unit(c(10,5,5,5), "mm"),
       strip.background =
