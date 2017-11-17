@@ -6,6 +6,11 @@
 \usage{
 get_n_jobs(n_jobs)
 }
+\arguments{
+\item{n_jobs}{The maximum number of concurrently running jobs.
+If -1 all CPUs are used. For n_jobs below -1, (n_cpus + 1 + n_jobs)
+are used. Thus for n_jobs = -2, all CPUs but one are used.}
+}
 \description{
 Determines the number of jobs which are going to run in parallel.
 This function is inspired by the python function in joblib.
