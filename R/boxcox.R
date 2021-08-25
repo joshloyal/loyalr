@@ -1,4 +1,4 @@
-#' Extract the 1 - $\alpha$ confidence interval from a box-cox transformation.
+#' Extract the 1 - alpha confidence interval from a box-cox transformation.
 #'
 #' @param boxcox_fit The result of calling MASS::boxcox.
 #' @param alpha The desired significance level.
