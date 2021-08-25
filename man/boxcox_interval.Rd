@@ -2,7 +2,7 @@
 % Please edit documentation in R/boxcox.R
 \name{boxcox_interval}
 \alias{boxcox_interval}
-\title{Extract the 1 - $\alpha$ confidence interval from a box-cox transformation.}
+\title{Extract the 1 - alpha confidence interval from a box-cox transformation.}
 \usage{
 boxcox_interval(boxcox_fit, alpha = 0.05)
 }
