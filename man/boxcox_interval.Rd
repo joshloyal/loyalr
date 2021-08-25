@@ -16,5 +16,5 @@ A list containing the maximum likelihood estimator of lambda
   (lambda_hat) and the (1 - alpha) CI for lambda.
 }
 \description{
-Extract the 1 - $\alpha$ confidence interval from a box-cox transformation.
+Extract the 1 - alpha confidence interval from a box-cox transformation.
 }
